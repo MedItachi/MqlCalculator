@@ -4,6 +4,7 @@ let tmpOp = null;
 let alow_calc = false;
 
 function addNum(num) {
+  shooScreen(num);
   if (alow_calc) {
     console.log("calcNum");
     alow_calc = false;
@@ -17,6 +18,7 @@ function adopMinPeriority(op) {
 }
 
 function readOperator(op) {
+  shooScreen(op);
   switch (op) {
     case "+":
       adopMinPeriority(op);
@@ -73,6 +75,8 @@ function calc() {
           break;
       }
     }
+    clear();
+    document.getElementById("result").innerHTML = num;
     //!! pay attention here
     return numbers.shift();
   } else if (numbers.length > 0) {
@@ -81,13 +85,27 @@ function calc() {
   return 0;
 }
 
-//12*10-3*5*10+ = -30
-//12+15+10*13 = 157
-addNum(12);
-readOperator("+");
-addNum(15);
-readOperator("+");
-addNum(10);
-readOperator("*");
-addNum(13);
-console.log(calc());
+function clear() {
+  numbers = [];
+  opMinPeriority = [];
+  tmpOp = null;
+  alow_calc = false;
+}
+function shooScreen(value) {
+  if (document.getElementById("operation").innerHTML == "0") {
+    document.getElementById("operation").innerHTML = "";
+  }
+  document.getElementById("operation").innerHTML += value;
+}
+
+//-12+3*4/2-1 = -12+6-1 = -7
+// addNum(-12);
+// readOperator("+");
+// addNum(3);
+// readOperator("*");
+// addNum(4);
+// readOperator("/");
+// addNum(2);
+// readOperator("-");
+// addNum(1);
+// console.log(calc());
