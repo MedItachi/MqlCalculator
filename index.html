@@ -1,53 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculatrice</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="js/script.js"></script>
-    <!-- cdn font awsome -->
+    <meta charset="utf-8" />
+    <title>Calculator using HTML Example</title>
+    <script src="js/index.js"></script>
+    <script src="js/calculator.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="screen">
-        <div class="history">
-          <i class="fa-solid fa-clock-rotate-left"></i>
-        </div>
-        <div class="output-screen">
-          <div class="operations">
-            <span id="operation" class=""></span>
-          </div>
-          <div class="result">
-            <span id="result">0</span>
-          </div>
-        </div>
-      </div>
-      <div class="calc-btn">
-        <button onclick="printScreen('(')" id="" class="operator">(</button>
-        <button class="operator">)</button>
-        <button class="operator" id="modulo">%</button>
-        <button class="operator" id="">CE</button>
-        <button class="num" id="7" onclick="printScreen(7)" value="7">7</button>
-        <button onclick="printScreen(8)" value="8" class="num" id="8">8</button>
-        <button onclick="printScreen(9)" value="9" class="num" id="9">9</button>
-        <button onclick="printScreen('÷')" class="operator" id="div">÷</button>
-        <button onclick="printScreen(4)" value="4" class="num" id="4">4</button>
-        <button onclick="printScreen(5)" value="5" class="num" id="5">5</button>
-        <button onclick="printScreen(6)" value="6" class="num" id="6">6</button>
-        <button onclick="printScreen('x')" class="operator" id="multi ">
-          ×
-        </button>
-        <button onclick="printScreen(1)" value="1" class="num" id="1">1</button>
-        <button onclick="printScreen(2)" value="2" class="num" id="2">2</button>
-        <button onclick="printScreen(3)" value="3" class="num" id="3">3</button>
-        <button onclick="printScreen('-')" class="operator" id="-">-</button>
-        <button onclick="printScreen(3)" class="num">0</button>
-        <button onclick="printScreen('.')" class="operator" id="dot">.</button>
-        <button onclick="calculate()" class="equal" id="equal">=</button>
-        <button onclick="printScreen('+')" class="operator" id="add">+</button>
-      </div>
-    </div>
+    <div id="root"></div>
   </body>
 </html>
