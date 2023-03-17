@@ -90,6 +90,7 @@ function calc() {
     return numbers.shift();
   } else {
     document.getElementById("result").innerHTML = numbers[0];
+    clear();
   }
 }
 
@@ -98,7 +99,6 @@ function clear() {
   opMinPeriority = [];
   tmpOp = null;
   alow_calc = false;
-  operaion_user = "";
 }
 
 function is_Operator(value) {
@@ -133,6 +133,7 @@ function clear_screen() {
   document.getElementById("result").innerHTML = "0";
   document.getElementById("operation").setAttribute("value", "empty");
   clear();
+  operaion_user = "";
 }
 
 function backspace() {
